@@ -22,7 +22,7 @@ The raw data needed some sprucing up in order to be worked with easily. Part of 
 ```
 =(((J2/60)/60)/24)+DATE(1970,1,1)
 ```
-!(/assets/screenshots/epoch-datetime.png)
+!(https://github.com/semionaut/kickstarter-analysis/assets/screenshots/epoch-datetime.png)
 
 Where the specific day may not be as consequential, we later simplified these values into the 'Years' column using the `YEAR()` function.
 
@@ -40,7 +40,7 @@ To be able to help Louise, it was possible to pinpoint those crieteria which mig
 
 To explore campaigns according to launch date by outcome, the relevant data was pulled into a pivot table that can be filtered by 'Parent Category' and displays the count of successful, failed, and canceled campaigns according to which month the campaign was launched.
 
-!(/assets/images/outcome_by_month.png)
+!(https://github.com/semionaut/kickstarter-analysis/assets/images/outcome_by_month.png)
 
 Separately, data for campaigns crowdfunding plays was selected and sorted according to goal amount and by outcome. Arguably, this is the most relevant data to Louise's project because it focused on crowdfunding campaigns for plays specifically and would allow her to evaluate the chance of success of her proposed >$10,000 funding request versus some other amount. It was straightforward to tally the number of campaigns according to different funding bands using the `COUNTIFS()` function with multiple conditions. As an example, the function used to find the total number of campaigns that were successful when seeking between $10,000 and $14,999:
 
@@ -50,7 +50,7 @@ Separately, data for campaigns crowdfunding plays was selected and sorted accord
 
 Have a look at the resulting table below.
 
-!(/assets/screenshots/outcome_by_amount.png)
+!(https://github.com/semionaut/kickstarter-analysis/assets/screenshots/outcome_by_amount.png)
 
 ##### Challenges & Potential Problems #####
 
@@ -62,7 +62,7 @@ On the same table, when calculating the success rate (%) for successful, failed,
 =ROUND((B2/$E2),4)
 ```
 
-!(/assets/screenshots/success_rate.png)
+!(https://github.com/semionaut/kickstarter-analysis/assets/screenshots/success_rate.png)
 
 Another potential challenge I can envision with the Kickstarter data, which came to light when looking through the 'Edinburgh Research' is that the values for funding goal and amount pledged are distributed across 13 different currencies, which *should* necessitate standardizing these dollar amounts into common units (eg. $USD) before comparing, for example, funding goal and outcome, or average donation per backer. 
 
@@ -77,17 +77,17 @@ Through the process described above, the following charts were generated:
 
 Looking at all theater campaigns in the dataset together, evidently May was where historically the most successful theater campaigns were funded. It might be inferred from the chart that funding for theater productions is at its highest in May, and continues dropping until later in the year, and therefore tempting to recommend that Louise launch her campaign starting in May. However May through July also typically see the highest total number of submitted theater campaigns, which might mean greater competition for those backers and those funds.
 
-!(/resources/Theatre_Outcomes_vs_Launch.png)
+!(https://github.com/semionaut/kickstarter-analysis/resources/Theatre_Outcomes_vs_Launch.png)
 
 Looking at this data another way, the overall success rate of May theater campaigns is only slightly higher than average:
 
-!(/assets/screenshots/success_by_month.png)
+!(https://github.com/semionaut/kickstarter-analysis/assets/screenshots/success_by_month.png)
 
 ##### Outcome by Goal Amount #####
 
 The second table and chart explored the relationship between the funding goal and success rate for crowdfunding campaigns for plays. 
 
-!(/resources/Outcomes_vs_Goals.png)
+!(https://github.com/semionaut/kickstarter-analysis/resources/Outcomes_vs_Goals.png)
 
 Evidently, campaigns asking less than $1,000 and $1,000 to $4,999 had the highest rate of success. The proportion of successful play campaigns decreases with higher target amounts. However, this data loses fidelity moving down the table as the success rate is often determined based on a very small number of total campaigns, probably too few to be reliable.
 
