@@ -22,7 +22,7 @@ The raw data needed some sprucing up in order to be worked with easily. Part of 
 ```
 =(((J2/60)/60)/24)+DATE(1970,1,1)
 ```
-![epoch](/assets/screenshots/epoch-datetime.png)
+![epoch](https://github.com/semionaut/kickstarter-analysis/blob/main/Assets/Screenshots/epoch-datetime.png)
 
 Where the specific day may not be as consequential, we later simplified these values into the 'Years' column using the `YEAR()` function.
 
